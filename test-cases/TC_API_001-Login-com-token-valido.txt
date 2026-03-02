@@ -1,0 +1,23 @@
+ID: TC_API_001
+Title: Login com token válido
+Preconditions:
+ - API Fake Store API disponível
+ - Usuário existênte na base de dados pública
+Request: 
+POST /auth/login
+Body
+{
+    "username":"mor_2314",
+    "password":"83r5^_"
+}
+Steps:
+1. Enviar requisição POST /auth/login com body
+2.  Capturar response
+Expected Result:
+ - Status code 201 Created
+ - Body contém token não vazio
+ - Content-type = application/json
+ - Tempo de resposta < 2000ms
+Actual Result:
+ - Status code 201
+Status: Passed

@@ -1,0 +1,17 @@
+ID: TC_API_004
+Title: Login com campos vazios
+Preconditions:
+ - Fake Store API disponível
+Request:
+POST /auth/login
+Body {}
+Steps:
+1. Enviar requisição POST /auth/login com body vazio
+2. Capturar response
+Expected Result:
+ - Status code 400 Bad Request
+ - Body contém mensagem de erro 
+ - Tempo de resposta < 2000ms
+Actual Result:
+ - Status code 400
+Status: Passed

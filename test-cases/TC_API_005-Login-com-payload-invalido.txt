@@ -1,0 +1,21 @@
+ID: TC_API_005
+Title: Login com payload inválido
+Preconditions:
+ - Fake Store API disponível
+Request:
+POST /auth/login
+Body:
+{
+   "username": 2,
+   "password": 3
+}
+Steps:
+1. Enviar requisição POST /auth/login com payload inválido
+2. Capturar response
+Expected result:
+ - Status code 401 Unauthorized
+ - Body contém mensagem de erro
+ - Tempo de resposta < 2000ms
+Actual Result:
+ - Status code 401
+Status: Passed
