@@ -46,3 +46,18 @@ O projeto será considerado concluído quando:
 - Bugs identificados forem documentados
 - Testes automatizados executarem sem falha
 - Documentação estiver disponível no repositório
+
+# Estratégia de execução de testes
+* Smoke tests (executados após novo deploy)
+    - Login válido
+    - Criação de novo usuário
+    - Adição de itens ao carrinho
+    - Checkout/Finalização de compra
+Critério: Testar fluxos críticos que torna o sistema utilizavel e afetam a regra de negócios
+
+* Regression tests (executados após mudanças)
+    - Todos os testes de autenticação
+    - Validação de status code
+    - Validação de payload
+    - Testes negativos
+Critérios: Garantir que mudanças e novas funcionalidades não impactaram funcionalidades existentes
