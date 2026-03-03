@@ -1,0 +1,17 @@
+ID: TC_API_004
+Title: Removendo produtos existentes
+Preconditions:
+ - Fake Store API disponível
+ - Produto conhecido existente na base de dados pública
+Request:
+DELETE /products/1
+Steps:
+1. Enviar requisição DELETE /products/1
+2. Capturar response
+Expected result:
+ - Status code 200 Ok
+ - Body vazio
+ - Tempo de resposta < 2000ms
+Actual result
+ - Status code 200 Ok
+Status: Passed

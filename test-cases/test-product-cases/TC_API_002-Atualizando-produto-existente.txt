@@ -1,0 +1,31 @@
+ID: TC_API_002
+Title: Atualizando produto existente
+Preconditions:
+ - Fake Store API disponível
+ - Produto conhecido existente na base de dados pública
+Request:
+PUT /products/1
+Body:
+{
+    "id":1,
+    "title": "Xbox 360 Controller",
+    "price": 30,
+    "description": "Controller for vintage console Xbox 360",
+    "category": "Games",
+    "image": "https://imgs.search.brave.com/B-aGb0NgX1VAkJmEUaXjI85ASJ1FVM9qsXJA6QUjj74/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzUxeG5LNkdqZFRM/LmpwZw",
+    "rating":{
+        "rate": 5,
+        "count": 160
+    }
+}
+Steps:
+1. Enviar requisição PUT /products/1 com body não vazio
+2. Capturar response
+Expected Result:
+ - Status code 200 Ok
+ - Body contém atualização do produto
+ - Content-type = application/json
+ - Tempo de resposta < 2000ms
+Actual result:
+ - Status code 200
+Status: Passed
