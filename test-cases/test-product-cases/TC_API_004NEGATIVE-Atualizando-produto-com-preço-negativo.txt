@@ -1,0 +1,24 @@
+ID: TC_API_004NEGATIVE
+Title: Atualizando parcialmente produto existente com valor de preço negativo
+Preconditions:
+ - Fake Store API disponível
+ - Produto conhecido existente na base de dados pública
+Request:
+Enviar PATCH /products/1
+Body:
+{
+   "price": -3.2
+}
+Steps:
+1. Enviar requisição PATCH /products/1 com "price" = -3.2
+2. Capturar status code e response
+Expected result:
+ - Status code 400 Bad Request
+ - Body contém mensagem de validação para campo "price"
+Actual Result:
+ - Status code 200 Ok
+ - Response retorna "price" = -3.2
+ - API aceita valor negativo
+Status: Failed
+
+Observação: A API pública utilizada não implementa validação da regra de negócio para valores negativos caracterizando limitação do ambiente mock.
