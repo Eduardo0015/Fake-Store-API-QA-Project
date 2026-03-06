@@ -1,0 +1,17 @@
+ID: TC_API_005NEGATIVE
+Title: Buscando produto com ID inexistente
+Precondition:
+ - Fake Store API disponível
+Request:
+GET /products/9999
+Steps:
+1. Enviar requisição GET /products/9999
+2. Capturar response
+Expected Result:
+ - Status code 404 not found
+ - Body vazio
+ - Tempo de resposta < 2000ms
+Actual result:
+ - Status code 200 Ok
+ - Sistema não tem validação de regra de negócios e encontra produto com "ID" = 9999
+Status: Passed

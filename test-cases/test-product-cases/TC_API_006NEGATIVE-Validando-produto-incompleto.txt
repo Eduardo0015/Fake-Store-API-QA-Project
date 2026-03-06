@@ -1,0 +1,20 @@
+ID: TC_API_OO6NEGATIVE
+Title: Validando produto com body incompleto
+Preconditions:
+ - Fake Store API disponível
+Request:
+POST /products
+Body:
+{
+  "title": "Produto inexistente"
+}
+Steps:
+1. Enviar POST /products com body contendo apenas "title"
+2. Capturar response
+Expected result:
+ - Status code 400 Bad Request
+ - Body contém mensagem solicitando preenchimento dos demais campos
+Actual Result:
+ - Status code 201 Ok
+ - Body não vazio
+Status: Failed
