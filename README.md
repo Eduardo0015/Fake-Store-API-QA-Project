@@ -1,14 +1,31 @@
 # Objetivo
-Projeto de automação de testes de API utilizando Cypress para validar endpoints da Fake Store API.
-Os testes cobrem cenários positivos e negativos relacionados a produtos e autenticação.
+Este projeto demonstra a execução de testes manuais e automatizados em uma API REST de e-commerce. O objetivo foi planejar cenários de teste, validar respostas da API, identificar possíveis defeitos e implementar verificações automatizadas utilizando Cypress.
 
 # Sistema de testes
-- Fake Store API
+- Fake Store API - API pública utilizada para simular funcionalidades de um sistema de e-commerce.
 
-# Funcionalidades testadas
-- Login
+# Estratégia de testes
+A abordagem de testes incluiu:
+
+- Testes funcionais de API
+- Cenários positivos e negativos
+- Validação de status codes
+- Validação da estrutura das respostas JSON
+- Verificação de regras de negócio
+- Automação de endpoints críticos
+
+# Coberturas de testes
+Endpoints testados:
+- Autenticação(Login)
 - Página de produtos
-- Carrinho
+- Carrinho de compras
+
+# Artefatos produzidos durante os testes:
+- 13 casos de teste
+- 9 Testes automatizados (Cypress)
+- 3 Arquivos de coleção do Postman
+- 1 Test plan
+- 1 Bug report
 
 # Tecnologias usadas
 - Postman
@@ -25,11 +42,23 @@ Os testes cobrem cenários positivos e negativos relacionados a produtos e auten
 - Atualizar produto
 - Login com credenciais válidas
 - Login com credenciais inválidas
+- Buscar todos os carrinhos existentes
+- Buscar carrinho especifico existente
+
+# Automação
+Os testes automatizados validam:
+- Status codes HTTP
+- Estrutura das respostas da API
+- Presença de campos obrigatórios
+- Tipos de dados
+- Estruturas aninhadas (produtos dentro do carrinho)
 
 # Bugs identificados
-- Durante os testes, foi identificado que a API permite criar produtos com preço negativo, o que caracteriza falha na regra de negócio
+Durante os testes foi identificado um possível problema de regra de negócio: a API permite a criação ou atualização de produtos com valores inválidos (por exemplo, preço negativo), comportamento que normalmente deveria ser rejeitado pelo sistema.
 
 # Como executar
+1. Instalar as dependências
+2. Executar os testes com Cypress
 - npm install
 - npx cypress open
 
