@@ -1,4 +1,4 @@
-ID: TC_API_002
+ID: TC_API_007
 Title: Atualizando produto existente
 Preconditions:
  - Fake Store API disponível

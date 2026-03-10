@@ -1,0 +1,13 @@
+ID: TC_API_012
+Title: Listar carrinhos cadastrados
+Preconditions:
+ - Fake Store API disponível
+Request:
+ - GET /carts
+Expected Result:
+ - Status code 200 Ok
+ - Resposta em array
+ - Body contém "ID", "userID", "date" e "products"
+Actual Result:
+ - Status code 200 Ok
+Status: Passed

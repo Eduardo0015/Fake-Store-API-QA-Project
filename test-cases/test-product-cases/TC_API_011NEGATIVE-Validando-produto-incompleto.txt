@@ -1,4 +1,4 @@
-ID: TC_API_OO6NEGATIVE
+ID: TC_API_O11NEGATIVE
 Title: Validando produto com body incompleto
 Preconditions:
  - Fake Store API disponível

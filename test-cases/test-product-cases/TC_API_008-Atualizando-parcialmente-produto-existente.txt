@@ -1,4 +1,4 @@
-ID: TC_API_003
+ID: TC_API_008
 Title: Atualizando parcialmente produto existente
 Preconditions:
  - Fake Store API disponível

@@ -1,4 +1,4 @@
-ID: TC_API_001
+ID: TC_API_006
 Title: Validando página de produtos
 Preconditions:
   - Fake Store API disponível

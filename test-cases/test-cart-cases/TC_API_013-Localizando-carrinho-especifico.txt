@@ -1,0 +1,18 @@
+ID: TC_API_013
+Title: Localizando carrinho especifico
+Preconditions:
+ - Fake Store API disponível
+ - Carrinho conhecido existênte na base de dados pública
+Request:
+ - GET /carts/1
+Steps:
+1.  Enviar request GET /carts/1
+2. Capturar response
+Expected Result:
+ - Status code 200 Ok
+ - Response retorna objeto
+ - Body contém "ID", "userID", "date" e "products"
+Actual Result:
+ - Status code 200 Ok
+ - Array contém dados do carrinho
+Status: Passed

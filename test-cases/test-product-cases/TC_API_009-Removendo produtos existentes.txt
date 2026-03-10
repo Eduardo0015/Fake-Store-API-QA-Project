@@ -1,4 +1,4 @@
-ID: TC_API_004
+ID: TC_API_009
 Title: Removendo produtos existentes
 Preconditions:
  - Fake Store API disponível

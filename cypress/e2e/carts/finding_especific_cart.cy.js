@@ -1,4 +1,4 @@
-it('Should get all carts', () => {
+it('Should a especific cart', () => {
     const cart = {
         "id": 1,
         "userId": 1,
@@ -14,13 +14,10 @@ it('Should get all carts', () => {
 
     cy.request({
         method: 'GET',
-        url:'https://fakestoreapi.com/carts',
+        url:'https://fakestoreapi.com/carts/1',
         body: cart
     }).then((response) => {
         expect(response.status).to.be.eq(200)
-        expect(response.body).to.be.an('array')
-        expect(response.body.length).to.be.greaterThan(0)
+        expect(response.body).to.be.an('object')
     })
-
-    
 })

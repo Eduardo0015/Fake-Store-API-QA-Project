@@ -1,4 +1,4 @@
-ID: TC_API_004NEGATIVE
+ID: TC_API_009NEGATIVE
 Title: Atualizando parcialmente produto existente com valor de preço negativo
 Preconditions:
  - Fake Store API disponível
